@@ -1,0 +1,25 @@
+package com.dev.command.impl;
+
+import com.dev.command.Command;
+import com.dev.model.Robot;
+
+/**
+ * This is the concrete command which defines relationship between Remote Control and Robot. This command helps ordering
+ * robot to walk and carry.
+ * 
+ * @author Piyush.Baheti
+ *
+ */
+public class WalkCommand implements Command {
+
+    private Robot robot;
+
+    public WalkCommand(Robot robot) {
+        this.robot = robot;
+    }
+
+    public void execute() {
+        robot.walk();
+    }
+
+}
